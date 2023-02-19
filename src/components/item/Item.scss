@@ -1,0 +1,53 @@
+.todo-item {
+  width: 100%;
+  background-color: #25273c;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.todo-item__checkbox {
+  width: 20px;
+  height: 20px;
+  transition: width 0.5s ease;
+
+  @media only screen and (max-width: 992px) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 17px;
+    height: 17px;
+  }
+
+  @media only screen and (max-width: 465px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.todo-item__label {
+  font-size: 18px;
+  line-height: 1.2;
+  transition: font-size 0.5s ease;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 17px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 465px) {
+    font-size: 15px;
+  }
+}
