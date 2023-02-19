@@ -16,7 +16,13 @@
 .todo-item__checkbox {
   width: 20px;
   height: 20px;
+  border: none;
+  border-radius: 5px;
   transition: width 0.5s ease;
+
+  &:focus {
+    outline: none;
+  }
 
   @media only screen and (max-width: 992px) {
     width: 18px;
