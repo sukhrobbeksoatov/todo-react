@@ -66,10 +66,17 @@
 .todo-item__inner-text {
   display: block;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .todo-item__time-text {
   white-space: nowrap;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .todo-item__delete-btn {
