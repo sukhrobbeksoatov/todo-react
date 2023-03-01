@@ -42,8 +42,13 @@
 
 .todo-item__label {
   font-size: 18px;
+  display: block;
+  width: 100%;
   line-height: 1.2;
   transition: font-size 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   @media only screen and (max-width: 992px) {
     font-size: 17px;
@@ -56,4 +61,20 @@
   @media only screen and (max-width: 465px) {
     font-size: 15px;
   }
+}
+
+.todo-item__inner-text {
+  display: block;
+  width: 100%;
+}
+
+.todo-item__time-text {
+  white-space: nowrap;
+}
+
+.todo-item__delete-btn {
+  padding: 2px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
