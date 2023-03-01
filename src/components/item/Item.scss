@@ -80,4 +80,14 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  img {
+    transition: transform .2s ease;
+  }
+
+  &:hover {
+    img {
+      transform: rotateZ(15deg);
+    }
+  }
 }
