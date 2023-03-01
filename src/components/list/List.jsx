@@ -47,29 +47,31 @@ export default function List() {
   }
 
   return (
-    <div className="container">
-      <form onSubmit={(evt) => handleSubmit(evt)} className="add-form">
-        <input
-          className="add-form__input"
-          type="text"
-          placeholder="Create a new todo..."
-          onChange={(evt) => setTodoName(evt.target.value)}
-          value={todoName}
-        />
-      </form>
-      <div className="todo-list">
-        {todos.map((todo, i) => (
-          <Item
-            key={i}
-            text={todo.name}
-            id={todo.id}
-            onToggle={() => handleToggle(todo.id)}
-            onDelete={() => handleDelete(todo.id)}
-            isDone={todo.isDone}
-            dueDate={todo.dueDate}
+    <section className="List">
+      <div className="container">
+        <form onSubmit={(evt) => handleSubmit(evt)} className="add-form">
+          <input
+            className="add-form__input"
+            type="text"
+            placeholder="Create a new todo..."
+            onChange={(evt) => setTodoName(evt.target.value)}
+            value={todoName}
           />
-        ))}
+        </form>
+        <div className="todo-list">
+          {todos.map((todo, i) => (
+            <Item
+              key={i}
+              text={todo.name}
+              id={todo.id}
+              onToggle={() => handleToggle(todo.id)}
+              onDelete={() => handleDelete(todo.id)}
+              isDone={todo.isDone}
+              dueDate={todo.dueDate}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
